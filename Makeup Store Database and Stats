@@ -1,0 +1,29 @@
+-- create makeup store database
+CREATE TABLE makeup ( id INTEGER PRIMARY KEY, product TEXT, section TEXT, quantity INTEGER);
+INSERT INTO makeup VALUES (1, "Foundation" ,"Face" , 10);
+INSERT INTO makeup VALUES (2, "Liquid blush" , "Face" , 6);
+INSERT INTO makeup VALUES (3, "Concealer" , "Face" , 9);
+INSERT INTO makeup VALUES (4, "Face primer" , "Face" , 8);
+INSERT INTO makeup VALUES (5, "Bronzer" , "Face" , 5);
+INSERT INTO makeup VALUES (6, "Eyelashes" , "Eyes" , 10);
+INSERT INTO makeup VALUES (7, "Lip liner" , "Lips" , 7);
+INSERT INTO makeup VALUES (8, " Eyelash glue" , "Eyes" , 3);
+INSERT INTO makeup VALUES (9, "Lip gloss" , "Lips" , 5);
+INSERT INTO makeup VALUES (10, "Brush set" , "Tools" , 8);
+INSERT INTO makeup VALUES (11, "Beauty blender" , "Tools" , 3);
+INSERT INTO makeup VALUES (12, "Highlighter" , "Face" , 5);
+INSERT INTO makeup VALUES (13, "Lipstick" , "Lips" , 5);
+INSERT INTO makeup VALUES (14, "Setting spray" , "Face" , 9);
+INSERT INTO makeup VALUES (15, "Eyeliner" , "Eyes" , 5);
+
+SELECT * FROM makeup;
+
+--display the database ordered by price. 
+SELECT * FROM makeup
+ORDER BY quantity desc;
+
+--what are the most 5 stocked items? 
+SELECT product, section, quantity
+FROM makeup
+order by quantity desc
+limit 5;
